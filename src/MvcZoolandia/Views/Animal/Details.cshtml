@@ -1,4 +1,4 @@
-@model MvcZoolandia.ViewModels.DocumentDetailsViewModel
+@model MvcZoolandia.Models.Animal
 
 @{
     ViewData["Title"] = "Details";
@@ -11,35 +11,24 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.HabitatId)
+            @Html.DisplayNameFor(model => model.IdHabitat)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.HabitatId)
+            @Html.DisplayFor(model => model.IdHabitat)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.SpeciesId)
+            @Html.DisplayNameFor(model => model.IdSpecies)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.SpeciesId)
+            @Html.DisplayFor(model => model.IdSpecies)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Animal)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Animal)
+            @Html.DisplayFor(model => model.Name)
         </dd>
     </dl>
-
-    @using (Html.BeginForm("Details", "Animal", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-        <label for="file">File Upload:</label>
-        <br/>
-        @Html.Label("File Name:   ")@Html.TextBoxFor(model => model.Title)
-        <input type="file" name="file" id="file" />
-        <br>
-        <input type="submit" value="Upload File" />
-        <br>
-    }
 </div>
 <p>
     <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
