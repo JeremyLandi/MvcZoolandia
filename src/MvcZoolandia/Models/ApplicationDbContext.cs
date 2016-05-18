@@ -20,5 +20,6 @@ namespace MvcZoolandia.Models
         public DbSet<Animal> Animal { get; set; }
         public DbSet<Habitat> Habitat { get; set; }
         public DbSet<Species> Species { get; set; }
+        public DbSet<Document> Document { get; set; }
     }
 }
